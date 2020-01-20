@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 /*
 0 - 600: Phone
 600 - 900: Tablet portrait
@@ -1193,7 +1193,7 @@ pre {
     margin-left: 91.66667%; } }
 
 .table {
-  width: 100%;
+  /*width: 100%;*/
   margin-bottom: 1rem;
   background-color: transparent; }
   .table th,
