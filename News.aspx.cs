@@ -59,7 +59,5 @@ namespace TayanaSystem
 
     }
 
-    internal class DataLayer
-    {
-    }
+    
 }
