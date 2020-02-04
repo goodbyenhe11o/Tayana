@@ -30,30 +30,33 @@
     <form id="form1" runat="server">
         <div class="contain">
             <div class="sub">
-                <p><a href="index.aspx">Home</a></p>
+                <p><a href="Home.aspx">Home</a></p>
             </div>
 
             <!--------------------------------選單開始---------------------------------------------------->
             <div class="menu">
                 <ul>
-                    <a href="yachts.aspx">
+                    <a href="YachtOverview.aspx">
                         <li class="menuli01">Yachts</li>
                     </a>
-                    <a href="news.aspx">
+                    <a href="News.aspx">
                         <li class="menuli02">NEWS</li>
                     </a>
-                    <a href="company.aspx">
+                    <a href="CompanyAbout.aspx">
                         <li class="menuli03">COMPANY</li>
                     </a>
-                    <a href="dealers.aspx">
+                    <a href="Dealers.aspx">
                         <li class="menuli04">DEALERS</li>
                     </a>
-                    <a href="contact.aspx">
+                    <a href="Contact.aspx">
                         <li class="menuli05">CONTAC</li>
                     </a>
                 </ul>
             </div>
-            <!--------------------------------選單開始結束---------------------------------------------------->
+            <!--------------------------------選單結束---------------------------------------------------->
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolderPic" runat="server">
+
 
             <!--遮罩-->
             <div class="bannermasks">
@@ -70,42 +73,20 @@
             </div>
             <!--------------------------------換圖結束---------------------------------------------------->
 
-
+                </asp:ContentPlaceHolder>
 
 
             <div class="conbg">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
 
-                <!--------------------------------左邊選單開始---------------------------------------------------->
-<%--                <asp:HiddenField ID="HiddenField1" runat="server" />
-                <asp:Repeater ID="Repeater1" runat="server" ClientIDMode="Static">
-                    <HeaderTemplate>
-                        <div class="left">
-                            <div class="left1">
-                                <p><span><%Response.Write((System.IO.Path.GetFileName(Request.PhysicalPath)).ToString().ToUpper());  %></span></p>
-                                <ul>
-                    </HeaderTemplate>
-                    <ItemTemplate>
-                        <li><a href="#"><%#Eval("title") %></a></li>
-                    </ItemTemplate>
-                    <FooterTemplate>
-                        </ul>
-                </div>
-                </div>
-                    </FooterTemplate>
-
-                </asp:Repeater>
-                --%>
+                
 
                 <!--------------------------------左邊選單結束---------------------------------------------------->
 
-                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     <!--------------------------------右邊選單開始---------------------------------------------------->
                     <!--------------------------------右邊選單結束---------------------------------------------------->
 
                 </asp:ContentPlaceHolder>
-                
-                
-
             </div>
 
             <!--------------------------------落款開始---------------------------------------------------->

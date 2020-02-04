@@ -71,14 +71,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CompanyAbout.aspx" />
+    <Content Include="CompanyCertificate.aspx" />
+    <Content Include="Contact.aspx" />
     <Content Include="css\csshover.htc" />
     <Content Include="css\homestyle.css" />
     <Content Include="css\iepngfix.htc" />
     <Content Include="css\jquery.ad-gallery.css" />
     <Content Include="css\js.css" />
+    <Content Include="css\pagination.css" />
     <Content Include="css\reset.css" />
     <Content Include="css\style.css" />
+    <Content Include="css\swiper.min.css" />
     <Content Include="Dealers.aspx" />
+    <Content Include="Home.aspx" />
     <Content Include="images\ad_next.png" />
     <Content Include="images\ad_prev.png" />
     <Content Include="images\ad_scroll_back.png" />
@@ -508,6 +514,12 @@
     <Content Include="javascript\ckeditor\vendor\promise.js" />
     <Content Include="javascript\iepngfix_tilebg.js" />
     <Content Include="javascript\pngfix.js" />
+    <Content Include="javascript\swiper.min.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="News.aspx" />
+    <Content Include="NewsDetail.aspx" />
+    <Content Include="Pagination.ascx" />
+    <Content Include="Register.aspx" />
     <Content Include="Scripts\AC_RunActiveContent.js" />
     <Content Include="Scripts\jquery-1.6.1.min.js" />
     <Content Include="Scripts\jquery.ad-gallery.js" />
@@ -516,10 +528,18 @@
     <Content Include="Scripts\jquery.event.hover-1.0.js" />
     <Content Include="Scripts\jquery.min.js" />
     <Content Include="Scripts\jquery.timers.js" />
+    <Content Include="Swiper.aspx" />
+    <Content Include="sys\SysAlbum.aspx" />
     <Content Include="sys\SysDealersEdit.aspx" />
     <Content Include="sys\SysEditNews.aspx" />
     <Content Include="sys\SysNews.aspx" />
     <Content Include="sys\SysDealers.aspx" />
+    <Content Include="sys\SysTest.aspx" />
+    <Content Include="sys\SysYacht.aspx" />
+    <Content Include="sys\SysYachtFile.aspx" />
+    <Content Include="sys\SysYachtLayout.aspx" />
+    <Content Include="sys\SysYachtOverview.aspx" />
+    <Content Include="sys\SysYachtSpecification.aspx" />
     <Content Include="sys\template\app-calender.html" />
     <Content Include="sys\template\app-profile.html" />
     <Content Include="sys\template\blank.html" />
@@ -5471,9 +5491,34 @@
     <Content Include="sys\template\ui-typography.html" />
     <Content Include="sys\template\widgets.html" />
     <Content Include="test.aspx" />
+    <Content Include="uploads\200122035033Chita.jpg" />
     <Content Include="Web.config" />
+    <Content Include="YachtLayout.aspx" />
+    <Content Include="YachtOverview.aspx" />
+    <Content Include="YachtSpecification.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompanyAbout.aspx.cs">
+      <DependentUpon>CompanyAbout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CompanyAbout.aspx.designer.cs">
+      <DependentUpon>CompanyAbout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyCertificate.aspx.cs">
+      <DependentUpon>CompanyCertificate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CompanyCertificate.aspx.designer.cs">
+      <DependentUpon>CompanyCertificate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Dealers.aspx.cs">
       <DependentUpon>Dealers.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -5481,7 +5526,64 @@
     <Compile Include="Dealers.aspx.designer.cs">
       <DependentUpon>Dealers.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\ListNumber.cs" />
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewsDetail.aspx.cs">
+      <DependentUpon>NewsDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewsDetail.aspx.designer.cs">
+      <DependentUpon>NewsDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagination.ascx.cs">
+      <DependentUpon>Pagination.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagination.ascx.designer.cs">
+      <DependentUpon>Pagination.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Swiper.aspx.cs">
+      <DependentUpon>Swiper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Swiper.aspx.designer.cs">
+      <DependentUpon>Swiper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sys\SysAlbum.aspx.cs">
+      <DependentUpon>SysAlbum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sys\SysAlbum.aspx.designer.cs">
+      <DependentUpon>SysAlbum.aspx</DependentUpon>
+    </Compile>
     <Compile Include="sys\SysDealersEdit.aspx.cs">
       <DependentUpon>SysDealersEdit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -5517,6 +5619,48 @@
     <Compile Include="sys\SysDealers.aspx.designer.cs">
       <DependentUpon>SysDealers.aspx</DependentUpon>
     </Compile>
+    <Compile Include="sys\SysTest.aspx.cs">
+      <DependentUpon>SysTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sys\SysTest.aspx.designer.cs">
+      <DependentUpon>SysTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sys\SysYacht.aspx.cs">
+      <DependentUpon>SysYacht.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sys\SysYacht.aspx.designer.cs">
+      <DependentUpon>SysYacht.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sys\SysYachtFile.aspx.cs">
+      <DependentUpon>SysYachtFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sys\SysYachtFile.aspx.designer.cs">
+      <DependentUpon>SysYachtFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sys\SysYachtLayout.aspx.cs">
+      <DependentUpon>SysYachtLayout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sys\SysYachtLayout.aspx.designer.cs">
+      <DependentUpon>SysYachtLayout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sys\SysYachtOverview.aspx.cs">
+      <DependentUpon>SysYachtOverview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sys\SysYachtOverview.aspx.designer.cs">
+      <DependentUpon>SysYachtOverview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sys\SysYachtSpecification.aspx.cs">
+      <DependentUpon>SysYachtSpecification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sys\SysYachtSpecification.aspx.designer.cs">
+      <DependentUpon>SysYachtSpecification.aspx</DependentUpon>
+    </Compile>
     <Compile Include="test.aspx.cs">
       <DependentUpon>test.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -5530,6 +5674,27 @@
     </Compile>
     <Compile Include="Web.Master.designer.cs">
       <DependentUpon>Web.Master</DependentUpon>
+    </Compile>
+    <Compile Include="YachtLayout.aspx.cs">
+      <DependentUpon>YachtLayout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YachtLayout.aspx.designer.cs">
+      <DependentUpon>YachtLayout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="YachtOverview.aspx.cs">
+      <DependentUpon>YachtOverview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YachtOverview.aspx.designer.cs">
+      <DependentUpon>YachtOverview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="YachtSpecification.aspx.cs">
+      <DependentUpon>YachtSpecification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YachtSpecification.aspx.designer.cs">
+      <DependentUpon>YachtSpecification.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -5827,7 +5992,6 @@
     <Folder Include="images\新增資料夾\" />
     <Folder Include="sys\template\plugins\jqvmap\js\maps\" />
     <Folder Include="sys\template\plugins\summernote\css\" />
-    <Folder Include="uploads\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

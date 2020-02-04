@@ -9,9 +9,11 @@
         <div class="col-lg-12  mt-3">
             <div class="card">
                 <div class="card-body">
-                    <h3>代理商(Dealers)地區顯示資料表
+                    <h3>代理商國家
                     </h3>
-                    <asp:GridView ID="gvDealers" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="SqlDataSource1">
+                <div class="table-responsive">
+
+                    <asp:GridView CssClass="table table-hover" ID="gvDealers" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="SqlDataSource1">
                         <Columns>
                             <asp:BoundField DataField="id" HeaderText="編號" InsertVisible="False" ReadOnly="True" SortExpression="id" />
                             <asp:TemplateField HeaderText="地區" SortExpression="Area">
@@ -21,16 +23,18 @@
                             </asp:TemplateField>
                             <asp:CommandField EditText="編輯名稱" HeaderText="操作" ShowEditButton="True" />
                             <asp:CommandField ShowDeleteButton="True" />
-                            <asp:TemplateField HeaderText="代理商數量">
+                            <asp:BoundField DataField="number" HeaderText="代理商數量" SortExpression="number" />
+
+                            <%--<asp:TemplateField HeaderText="代理商數量" >
 
                                 <ItemTemplate>
                                     <asp:Label ID="Label1" runat="server"></asp:Label>
                                 </ItemTemplate>
 
-                            </asp:TemplateField>
+                            </asp:TemplateField>--%>
                         </Columns>
                     </asp:GridView>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TayanaConnectionString %>" DeleteCommand="DELETE FROM [DealersArea] WHERE [id] = @id" InsertCommand="INSERT INTO [DealersArea] ([Area], [initdate]) VALUES (@Area, @initdate)" SelectCommand="SELECT * FROM [DealersArea]" UpdateCommand="UPDATE [DealersArea] SET [Area] = @Area, [initdate] = @initdate WHERE [id] = @id">
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TayanaConnectionString %>" DeleteCommand="DELETE FROM [DealersArea] WHERE [id] = @id" InsertCommand="INSERT INTO [DealersArea] ([Area], [initdate]) VALUES (@Area, @initdate)" SelectCommand="SELECT *,(select count(*) from Dealers where Area_Id = DealersArea.id) as number  FROM [DealersArea]" UpdateCommand="UPDATE [DealersArea] SET [Area] = @Area, [initdate] = @initdate WHERE [id] = @id">
                         <DeleteParameters>
                             <asp:Parameter Name="id" Type="Int32" />
                         </DeleteParameters>
@@ -43,8 +47,9 @@
                             <asp:Parameter Name="initdate" Type="DateTime" />
                             <asp:Parameter Name="id" Type="Int32" />
                         </UpdateParameters>
-                    </asp:SqlDataSource>
+                        </asp:SqlDataSource>
                     <br>
+                    </div>
                     <asp:Button ID="btnNewDealer" runat="server" Text="新增代理商" OnClick="btnNewDealer_OnClick" />
                     <br>
                     <br>

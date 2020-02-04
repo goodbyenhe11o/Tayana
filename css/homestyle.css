@@ -132,7 +132,7 @@ body {
 }
 
 .bannermasks {
-	height: 371px;
+	/*height: 371px;*/
 	width: 967px;
 	position: absolute;
 	left: 18px;
@@ -199,7 +199,7 @@ body {
 	background-image: url(../images/con_bg.gif);
 	float: left;
 	width: 1002px;
-	margin-top: 23px;
+	margin-top: 100px;
 	padding-bottom: 40px;
 }
 .left {
@@ -271,6 +271,13 @@ body {
 	width: 100%;
 	line-height: 170%;
 }
+.boxCompany {
+    height: 300px;
+    float: left;
+    width: 100%;
+    line-height: 170%;
+
+}
 .box5 {
 	width: 100%;
 	float: left;
@@ -331,11 +338,11 @@ body {
 	border-top-color: #b3b3b3;
 	padding-top: 15px;
 }
-.box3 p {
+/*.box3 p {
 	float: right;
 	padding: 4px;
 	border: 1px solid #a7a7a7;
-}
+}*/
 
 .box4 p {
 	float: right;
@@ -372,7 +379,11 @@ body {
 	padding-bottom: 15px;
 	padding-top: 10px;
 }
-.list02 {
+.list01 a {
+    color: #34A9D4;
+    text-decoration: none;
+}
+    .list02 {
 	float: left;
 	width: 100%;
 	border-bottom-width: 1px;
@@ -494,11 +505,15 @@ body {
 	font-size: 90%;
 }
 #crumb {
-	position: absolute;
-	top: 515px;
-	right: 19px;
-	font-size: 80%;
-	color: #747474;
+    /*position: absolute;
+    top: 550px;
+    right: 19px;*/
+    font-size: 80%;
+    color: #747474;
+    position: relative;
+    top: 23px;
+    right: -550px;
+    display: inline-block;
 }
 #crumb a {
 	color: #747474;
@@ -703,13 +718,15 @@ body {
 .table02 span {
 	font-weight: bold;
 }
-.table02    td   {
-	border: 1px solid #34a9d4;
+.table02 td {
+    border: 1px solid #34a9d4;
+    /*width: 50%;*/
 }
 .table02td01 {
-	width: 70%;
+	width: 60%;
 	vertical-align: top;
 }
+
 
 .table02 table {
 	width: 100%;
@@ -724,7 +741,14 @@ body {
 	text-align: left;
 	padding-left: 10px;
 	border: 1px solid #34a9d4;
+    width: 50%;
 }
+.table02 td img {
+    width: 100%;
+    height: auto;
+
+}
+
 
 .tr003 {
 	background-color: #f6f6f6;

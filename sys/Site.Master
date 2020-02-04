@@ -54,7 +54,7 @@
         ***********************************-->
         <div class="nav-header">
             <div class="brand-logo">
-                <a href="index.html">
+                <a href="../Home.aspx">
                     <b class="logo-abbr"><img src="./template/images/logo.png" alt=""> </b>
                     <span class="logo-compact"><img src="./template/images/logo-compact.png" alt=""></span>
                     <span class="brand-title">
@@ -269,12 +269,13 @@
                     </li>
                     <li class="mega-menu mega-menu-sm">
                         <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="icon-globe-alt menu-icon"></i><span class="nav-text">後台管理</span>
+                            <i class="icon-globe-alt menu-icon"></i><span class="nav-text">前台管理</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="#">Yacht相簿</a></li>
-                            <li><a href="#">News</a></li>
-                            <li><a href="#">Dealers</a></li>
+                            <li><a href="SysYacht.aspx">遊艇管理</a></li>
+                            <li><a href="SysNews.aspx">新聞管理</a></li>
+                            <li><a href="SysDealers.aspx">代理商管理</a></li>
+
 
                         </ul>
                   

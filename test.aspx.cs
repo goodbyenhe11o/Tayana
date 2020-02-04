@@ -14,16 +14,16 @@ namespace TayanaSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string config = WebConfigurationManager.ConnectionStrings["TayanaConnectionString"].ConnectionString;
-            SqlConnection cn = new SqlConnection(config);
-            SqlCommand cm = new SqlCommand($"select * from Dealers where Area_Id = @id ", cn);
-            cm.Parameters.Add("@id", SqlDbType.NVarChar);
-            cm.Parameters["@id"].Value = Request.QueryString["id"];
-            cn.Open();
-            SqlDataReader rd = cm.ExecuteReader();
-            rp.DataSource = rd;
-            rp.DataBind();
-            cn.Close();
+            //string config = WebConfigurationManager.ConnectionStrings["TayanaConnectionString"].ConnectionString;
+            //SqlConnection cn = new SqlConnection(config);
+            //SqlCommand cm = new SqlCommand($"select * from Dealers where Area_Id = @id ", cn);
+            //cm.Parameters.Add("@id", SqlDbType.NVarChar);
+            //cm.Parameters["@id"].Value = Request.QueryString["id"];
+            //cn.Open();
+            //SqlDataReader rd = cm.ExecuteReader();
+            //rp.DataSource = rd;
+            //rp.DataBind();
+            //cn.Close();
 
         }
         public static string Symbol(string result)
