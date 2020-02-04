@@ -38,7 +38,7 @@
 <div id="crumb"><a href="#">Home</a> >> <a href="#">Company  </a> >> <a href="#"><span class="on1">Certificate</span></a></div>
 <div class="right"> 
 <div class="right1">
-  <div class="title"> <span>Certificate</span></div>
+  <div class="title"> <span>Certificate!</span></div>
   
 <!--------------------------------內容開始----------------------------------------------------> 
 <div class="boxCompany">
