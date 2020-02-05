@@ -41,15 +41,17 @@ namespace TayanaSystem
             {
                 //cm.Cancel();
                 //reader.Close();
-                
-                //reader.Read();
-                //Session["Login"] = "OK";
-                //Session["Manage_Id"] = reader["Manage_Id"].ToString();
-                //Session["UserName"] = reader["UserName"].ToString();
-                //Session["MenuAuthority"] = reader["MenuAuthority"].ToString();
+                if (reader.Read())
+                {
+                    Session["Login"] = "OK";
+                    Session["id"] = reader["id"].ToString();
+                    Session["Manage_Id"] = reader["Manage_Id"].ToString();
+                    Session["UserName"] = reader["UserName"].ToString();
+                    Session["MenuAuthority"] = reader["MenuAuthority"].ToString();
+                }
 
                 cn.Close();
-                Response.Redirect("SysYacht.aspx");
+                Response.Redirect("SysHome.aspx");
 
             }
 

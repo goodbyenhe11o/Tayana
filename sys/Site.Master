@@ -221,7 +221,7 @@
                         <li class="icons dropdown">
                             <div class="user-img c-pointer position-relative"   data-toggle="dropdown">
                                 <span class="activity active"></span>
-                                <img src="images/user/1.png" height="40" width="40" alt="">
+                                <img src="template/images/user/1.png" height="40" width="40" alt="">
                             </div>
                             <div class="drop-down dropdown-profile animated fadeIn dropdown-menu">
                                 <div class="dropdown-content-body">
@@ -239,7 +239,7 @@
                                         <li>
                                             <a href="page-lock.html"><i class="icon-lock"></i> <span>Lock Screen</span></a>
                                         </li>
-                                        <li><a href="page-login.html"><i class="icon-key"></i> <span>Logout</span></a></li>
+                                        <li><a href="Logout.aspx"><i class="icon-key"></i> <span>Logout</span></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -264,7 +264,8 @@
                             <i class="icon-speedometer menu-icon"></i><span class="nav-text">帳號管理</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="./index.html">系統權限設定</a></li>
+                            <li><a href="SysUserDetail.aspx">會員中心</a></li>
+                            <asp:Literal ID="lrUserManage" runat="server"></asp:Literal>
                         </ul>
                     </li>
                     <li class="mega-menu mega-menu-sm">
@@ -272,10 +273,10 @@
                             <i class="icon-globe-alt menu-icon"></i><span class="nav-text">前台管理</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="SysYacht.aspx">遊艇管理</a></li>
+                            <%--<li><a href="SysYacht.aspx">遊艇管理</a></li>
                             <li><a href="SysNews.aspx">新聞管理</a></li>
-                            <li><a href="SysDealers.aspx">代理商管理</a></li>
-
+                            <li><a href="SysDealers.aspx">代理商管理</a></li>--%>
+                            <asp:Literal ID="lrMenu" runat="server"></asp:Literal>
 
                         </ul>
                   

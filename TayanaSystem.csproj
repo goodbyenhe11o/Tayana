@@ -519,6 +519,7 @@
     <Content Include="News.aspx" />
     <Content Include="NewsDetail.aspx" />
     <Content Include="Pagination.ascx" />
+    <Content Include="sys\Logout.aspx" />
     <Content Include="sys\Register.aspx" />
     <Content Include="Scripts\AC_RunActiveContent.js" />
     <Content Include="Scripts\jquery-1.6.1.min.js" />
@@ -532,9 +533,13 @@
     <Content Include="sys\SysAlbum.aspx" />
     <Content Include="sys\SysDealersEdit.aspx" />
     <Content Include="sys\SysEditNews.aspx" />
+    <Content Include="sys\SysHome.aspx" />
     <Content Include="sys\SysNews.aspx" />
     <Content Include="sys\SysDealers.aspx" />
     <Content Include="sys\SysTest.aspx" />
+    <Content Include="sys\SysUserDetail.aspx" />
+    <Content Include="sys\SysUserEdit.aspx" />
+    <Content Include="sys\SysUserManage.aspx" />
     <Content Include="sys\SysYacht.aspx" />
     <Content Include="sys\SysYachtFile.aspx" />
     <Content Include="sys\SysYachtLayout.aspx" />
@@ -5563,6 +5568,13 @@
       <DependentUpon>Pagination.ascx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sys\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sys\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
     <Compile Include="sys\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -5598,6 +5610,13 @@
     <Compile Include="sys\SysEditNews.aspx.designer.cs">
       <DependentUpon>SysEditNews.aspx</DependentUpon>
     </Compile>
+    <Compile Include="sys\SysHome.aspx.cs">
+      <DependentUpon>SysHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sys\SysHome.aspx.designer.cs">
+      <DependentUpon>SysHome.aspx</DependentUpon>
+    </Compile>
     <Compile Include="sys\SysNews.aspx.cs">
       <DependentUpon>SysNews.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -5625,6 +5644,27 @@
     </Compile>
     <Compile Include="sys\SysTest.aspx.designer.cs">
       <DependentUpon>SysTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sys\SysUserDetail.aspx.cs">
+      <DependentUpon>SysUserDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sys\SysUserDetail.aspx.designer.cs">
+      <DependentUpon>SysUserDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sys\SysUserEdit.aspx.cs">
+      <DependentUpon>SysUserEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sys\SysUserEdit.aspx.designer.cs">
+      <DependentUpon>SysUserEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sys\SysUserManage.aspx.cs">
+      <DependentUpon>SysUserManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sys\SysUserManage.aspx.designer.cs">
+      <DependentUpon>SysUserManage.aspx</DependentUpon>
     </Compile>
     <Compile Include="sys\SysYacht.aspx.cs">
       <DependentUpon>SysYacht.aspx</DependentUpon>
