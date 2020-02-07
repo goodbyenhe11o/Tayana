@@ -52,7 +52,7 @@ namespace TayanaSystem.sys
                         string GetDate = DateTime.Now.ToString("yyMMddhhmmss");
                         fileName = GetDate + fileName;
                         string pathtocheck = savepath + fileName;
-                        //postedFile.SaveAs(Server.MapPath(pathtocheck));
+                        postedFile.SaveAs(Server.MapPath(pathtocheck));
 
 
                         SqlCommand cm =
@@ -68,11 +68,7 @@ namespace TayanaSystem.sys
                         cm.ExecuteNonQuery();
                         cn.Close();
 
-                    //else
-                    //{
-                    //    lbUploadResult.Text = "請上傳正確格式";
-                    //    lbUploadResult.ForeColor = Color.Crimson;
-                    //}
+                 
 
                 }
 
@@ -109,7 +105,7 @@ namespace TayanaSystem.sys
                         cn.Close();
                     }
                 }
-                Response.Redirect($"SysYachtLayout.aspx?id={Request.QueryString["id"]}");
+                Response.Redirect($"SysYachtFile.aspx?id={Request.QueryString["id"]}");
             }
         }
     }

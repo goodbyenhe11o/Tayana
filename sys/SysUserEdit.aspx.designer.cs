@@ -24,6 +24,15 @@ namespace TayanaSystem.sys
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// lbName 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbName;
+
+        /// <summary>
         /// tbName 控制項。
         /// </summary>
         /// <remarks>
@@ -31,6 +40,15 @@ namespace TayanaSystem.sys
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbName;
+
+        /// <summary>
+        /// lbAccount 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbAccount;
 
         /// <summary>
         /// tbAccount 控制項。
@@ -42,13 +60,22 @@ namespace TayanaSystem.sys
         protected global::System.Web.UI.WebControls.TextBox tbAccount;
 
         /// <summary>
-        /// tbPassword 控制項。
+        /// lbPwdOld 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbPassword;
+        protected global::System.Web.UI.WebControls.Label lbPwdOld;
+
+        /// <summary>
+        /// tbPwdOld 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbPwdOld;
 
         /// <summary>
         /// hidden_authority 控制項。

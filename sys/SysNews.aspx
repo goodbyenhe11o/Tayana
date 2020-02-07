@@ -1,6 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/sys/Site.Master" AutoEventWireup="true" CodeBehind="SysNews.aspx.cs" Inherits="TayanaSystem.sys.News" %>
+
+<%@ Register Src="~/Pagination.ascx" TagPrefix="uc1" TagName="Pagination" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-   
+    <link href="../css/pagination.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form id="form1" runat="server">
@@ -9,7 +12,16 @@
         <div class="card-body">
             <h3>新聞列表
             </h3>
-        <asp:GridView ID="GridView1" CssClass="table table-hover" runat="server" AutoGenerateColumns="False" DataKeyNames="id" OnRowCommand="GridView1_OnRowCommand">
+            <div class="form-group">
+            <i class="mdi mdi-magnify"></i>
+            <asp:Label ID="lbSearchDate" runat="server" Text="選擇區間"></asp:Label>
+            <asp:TextBox ID="tbDateFrom" runat="server" TextMode="Date"></asp:TextBox>至
+                <asp:TextBox ID="tbDateTo" runat="server" TextMode="Date"></asp:TextBox>
+                <asp:Button ID="btnSearchDate" runat="server" Text="尋找" OnClick="btnSearchDate_OnClick" />
+                <asp:Button ID="btnClear" runat="server" Text="清除條件" OnClick="btnClear_OnClick" />
+ </div>
+            <br>
+                <asp:GridView ID="GridView1" CssClass="table table-hover" runat="server" AutoGenerateColumns="False" DataKeyNames="id" OnRowCommand="GridView1_OnRowCommand">
             <Columns>
                 <asp:BoundField DataField="id" HeaderText="資料庫編號" InsertVisible="False" ReadOnly="True" SortExpression="id" />
                 <asp:BoundField DataField="Title" HeaderText="新聞標題" SortExpression="Title" />
@@ -24,7 +36,7 @@
                 </asp:TemplateField>
                 <asp:TemplateField HeaderText="置頂">
                     <ItemTemplate>
-                        <asp:Label ID="Label1" runat="server" Text='<%# Eval("[Top]") %>'></asp:Label>
+                        <asp:Label ID="Label1" runat="server" Text='<%# Eval("TopNews") %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
                 <asp:TemplateField HeaderText="編輯">
@@ -42,6 +54,6 @@
             </div>
        
     </form>
-    
+    <uc1:Pagination runat="server" ID="Pagination1" />
 
 </asp:Content>

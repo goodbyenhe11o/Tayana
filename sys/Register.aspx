@@ -52,15 +52,20 @@
 
                                     <form class="mt-5 mb-5 login-input">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Name" required>
+                                            <%--<input type="text" class="form-control" placeholder="Name" required>--%>
+                                            <asp:TextBox ID="tbName" CssClass="form-control" runat="server" Text="Name" ></asp:TextBox>
+                                        
+                                            </div>
+                                        <div class="form-group">
+                                            <%--<input type="email" class="form-control" placeholder="Email" required>--%>
+                                            <asp:TextBox ID="tbAccount" runat="server" CssClass="form-control" Text="Account"></asp:TextBox>
                                         </div>
                                         <div class="form-group">
-                                            <input type="email" class="form-control" placeholder="Email" required>
+                                            <%--<input type="password" class="form-control" placeholder="Password" required>--%>
+                                            <asp:TextBox ID="tbPassword" CssClass="form-control" runat="server" Text="Password" ></asp:TextBox>
                                         </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control" placeholder="Password" required>
-                                        </div>
-                                        <button class="btn login-form__btn submit w-100">Sign in</button>
+                                        <%--<button class="btn login-form__btn submit w-100">Sign in</button>--%>
+                                        <asp:Button ID="btnSubmit" runat="server" Text="Sign in" CssClass="btn login-form__btn submit w-100" OnClick="btnSubmit_OnClick"/>
                                     </form>
                                     <p class="mt-5 login-form__footer">Have account <a href="Login.aspx" class="text-primary">Sign Up </a>now</p>
                                 </div>

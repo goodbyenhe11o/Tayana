@@ -60,7 +60,13 @@ namespace TayanaSystem
                 rpPicBottom.DataBind();
                 cn.Close();
 
-
+                //抓檔案下載
+                SqlCommand cmDownload = new SqlCommand($"select FileName,FileRoot from Download where Yacht_Id = {id}",cn);
+                cn.Open();
+                SqlDataReader rdDownload = cmDownload.ExecuteReader();
+                rpDownload.DataSource = rdDownload;
+                rpDownload.DataBind();
+                cn.Close();
 
                 aOverview.HRef = $"YachtOverview.aspx?id={id}";
                 aLayout.HRef = $"YachtLayout.aspx?id={id}";

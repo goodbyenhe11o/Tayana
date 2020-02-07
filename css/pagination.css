@@ -24,8 +24,8 @@ div.pagination { padding: 3px; margin: 3px; }
         border-radius: 3px;
     }
         div.pagination a:hover, div.pagination a:active {
-            border: 1px solid #5f7f39;
-            color: #000;
+            border: 1px solid #1D6A96;
+            color: #1D6A96;
             text-decoration: none;
         }
     div.pagination span.current {
@@ -35,6 +35,7 @@ div.pagination { padding: 3px; margin: 3px; }
         font-weight: bold;
         background-color: #34A9D4;
         color: #FFF;
+        border-radius: 3px;
     }
 div.pagination span.disabled {
      padding: 2px 5px 2px 5px;

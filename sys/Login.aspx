@@ -52,17 +52,19 @@
                                     <form class="mt-5 mb-5 login-input">
                                         <div class="form-group">
                                             <%--<input type="email" class="form-control" placeholder="Email">--%>
-                                            <asp:TextBox ID="tbAccount" runat="server" CssClass="form-control" Text="Account"></asp:TextBox>
+                                            <asp:Label ID="lbAccount" runat="server" Text="Account"></asp:Label>
+                                            <asp:TextBox  ID="tbAccount" runat="server" CssClass="form-control"></asp:TextBox>
                                         </div>
                                         <div class="form-group">
                                             <%--<input type="password" class="form-control" placeholder="Password">--%>
-                                            <asp:TextBox ID="tbPassword" CssClass="form-control" runat="server" Text="Password" ></asp:TextBox>
+                                            <asp:Label ID="lbPassword" runat="server" Text="Password"></asp:Label>
+                                            <asp:TextBox ID="tbPassword" CssClass="form-control" runat="server" Text="Password"  TextMode="Password"></asp:TextBox>
                                         </div>
                                         <asp:Label ID="lbWarn" runat="server" ForeColor="#FF3399"></asp:Label>
                                         <br>
                                         <asp:Button ID="btnLogin" runat="server" Text="Sign in" CssClass="btn login-form__btn submit w-100" OnClick="btnLogin_OnClick" />
                                     </form>
-                                    <p class="mt-5 login-form__footer">Dont have account? <a href="Register.aspx" class="text-primary">Sign Up</a> now</p>
+                                    <%--<p class="mt-5 login-form__footer">Dont have account? <a href="Register.aspx" class="text-primary">Sign Up</a> now</p>--%>
                                 </div>
                             </div>
                         </div>

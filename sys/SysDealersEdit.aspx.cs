@@ -29,7 +29,7 @@ namespace TayanaSystem.sys
                 string savepath = @"/uploads/";
                 string FileName = FileUpload1.FileName;
                 string extension = System.IO.Path.GetExtension(FileName);
-                if(extension == ".jpg" || extension == ".png")
+                if(FileUpload1.PostedFile.ContentType == "image/jpeg" || FileUpload1.PostedFile.ContentType == "image/png")
                 {
 
 

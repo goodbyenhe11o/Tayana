@@ -24,20 +24,20 @@ namespace TayanaSystem
             if (!IsPostBack)
             {
 
-            string config = WebConfigurationManager.ConnectionStrings["TayanaConnectionString"].ConnectionString;
-            SqlConnection cn = new SqlConnection(config);
-            SqlCommand cm = new SqlCommand($"Select * from News ORDER BY [Top] desc ,initdate DESC", cn);
-            cn.Open();
-            SqlDataReader rd = cm.ExecuteReader();
-            rpContnet.DataSource = rd;
-            rpContnet.DataBind();
-            cn.Close();
+            //string config = WebConfigurationManager.ConnectionStrings["TayanaConnectionString"].ConnectionString;
+            //SqlConnection cn = new SqlConnection(config);
+            //SqlCommand cm = new SqlCommand($"Select * from News ORDER BY TopNews desc ,initdate DESC", cn);
+            //cn.Open();
+            //SqlDataReader rd = cm.ExecuteReader();
+            //rpContnet.DataSource = rd;
+            //rpContnet.DataBind();
+            //cn.Close();
             Show();
             }
 
         }
         //宣告一頁有幾個項目
-        private const int PageSize = 10;
+        private const int PageSize = 5;
 
         private void Show()
         {

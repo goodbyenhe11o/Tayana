@@ -13,15 +13,15 @@
                     <br>
 
                     
-                    User Name：
+                    用戶名稱：
                     <asp:Label ID="lbName" runat="server" Text='<%#Eval("UserName") %>'></asp:Label>
                     <br>
                     <br>
-                    User Account：
+                    帳號：
                     <asp:Label ID="lbAccount" runat="server" Text='<%#Eval("Account") %>'></asp:Label>
                     <br>
                     <br>
-                    User Authority：
+                    前台權限：
                     <asp:Label ID="lbAuthority" runat="server" Text='<%#Eval("MenuAuthority") %>'></asp:Label>
                     <br>
                     <br>

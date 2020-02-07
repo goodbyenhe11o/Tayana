@@ -17,6 +17,11 @@
                 <%--<asp:BoundField DataField="Specification" HeaderText="Specification" SortExpression="Specification" />--%>
                 <asp:BoundField DataField="initdate" HeaderText="建立時間" SortExpression="initdate" />
                 <%--<asp:BoundField DataField="NewBuilding" HeaderText="備註" SortExpression="NewBuilding" />--%>
+                <asp:TemplateField HeaderText="備註" ShowHeader="False">
+                    <ItemTemplate>
+                        <asp:Label ID="lbNB" runat="server" Text='<%#Eval("NewBuilding") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
                 <asp:TemplateField HeaderText="Overview" ShowHeader="False">
                     <ItemTemplate>
                         <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl='<%# "SysYachtOverview.aspx?id="+ Eval("id") %>' Text="編輯"></asp:HyperLink>
@@ -32,11 +37,7 @@
                         <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%# "SysYachtSpecification.aspx?id="+ Eval("id") %>' Text="編輯"></asp:HyperLink>
                     </ItemTemplate>
                 </asp:TemplateField>
-                <asp:TemplateField HeaderText="備註" ShowHeader="False">
-                    <ItemTemplate>
-                        <asp:Label ID="lbNB" runat="server" Text='<%#Eval("NewBuilding") %>'></asp:Label>
-                    </ItemTemplate>
-                </asp:TemplateField>
+                
 
                 <asp:TemplateField HeaderText="相簿" ShowHeader="False">
                     <ItemTemplate>

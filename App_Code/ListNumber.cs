@@ -58,13 +58,48 @@ namespace TayanaSystem
 
         public int GetDataCount()
         {
+            //這個無法依照搜尋數量改變
             string commandString = "select count(*) from News where 1=1";
             SqlCommand sqlCommand = new SqlCommand(commandString, _connection);
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
             DataTable dataTable = new DataTable();
             sqlDataAdapter.Fill((dataTable));
             return dataTable.Rows.Count > 0 ? Convert.ToInt32(dataTable.Rows[0][0].ToString()) : 0;
+
+
         }
+
+        public int GetListCount(string startDate, string endDate)
+        {
+            string searchString = "";
+            string commandString = "select count(*) from News /*--where begin --*/";
+
+            //搜尋字串
+
+            if ((!string.IsNullOrEmpty(startDate)) && (!string.IsNullOrEmpty(endDate)))
+            {
+                searchString += "where initdate between @startDate and @endDate";
+            }
+
+            commandString = commandString.Replace("/*--where begin --*/", string.Format("/*--where begin --*/ {0}{1}", Environment.NewLine, searchString));
+            SqlCommand sqlCommand = new SqlCommand(commandString, _connection); 
+            // 處理參數
+            sqlCommand.Parameters.Add("@startDate", SqlDbType.NVarChar, 20);
+            sqlCommand.Parameters.Add("@endDate", SqlDbType.NVarChar, 20);
+            sqlCommand.Parameters["@startDate"].Value = startDate;
+            sqlCommand.Parameters["@endDate"].Value = endDate;
+
+
+
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+            DataTable dataTable = new DataTable();
+            sqlDataAdapter.Fill((dataTable));
+            return dataTable.Rows.Count > 0 ? Convert.ToInt32(dataTable.Rows[0][0].ToString()) : 0;
+        }
+
+
+
+
 
         public enum SortMethed
         {
@@ -78,12 +113,12 @@ namespace TayanaSystem
         {
             string commandString = "WITH NewsA AS\n"
                                  + "(\n"
-                                 + "SELECT ROW_NUMBER() OVER(order by [Top] desc, id desc) AS RowNumber\n"
+                                 + "SELECT ROW_NUMBER() OVER(order by  id desc) AS RowNumber\n"
                                  + ", News.*\n"
                                  + "FROM  News\n"
-                                 + "where 1=1\n"
+                                 + "/*--where begin --*/\n"
                                  + ")\n"
-                                 + "select * from NewsA WHERE RowNumber >=@start  and RowNumber <=@end";
+                                 + "select id,Title,Summary,MainPicture,initdate,case TopNews when 1 then '是' else '否' end as TopNews from NewsA WHERE RowNumber >=@start  and RowNumber <=@end";
 
             //搜尋字串
             string searchString = "";
@@ -103,7 +138,7 @@ namespace TayanaSystem
 
             if ((!string.IsNullOrEmpty(startDate)) && (!string.IsNullOrEmpty(endDate)))
             {
-                searchString += " and (payDate between @startDate and @endDate)";
+                searchString += "where initdate between @startDate and @endDate";
             }
 
             commandString = commandString.Replace("/*--where begin --*/", string.Format("/*--where begin --*/ {0}{1}", Environment.NewLine, searchString));
@@ -127,6 +162,8 @@ namespace TayanaSystem
             DataTable dataTable = new DataTable();
             sqlDataAdapter.Fill((dataTable));
             return dataTable;
+
+
         }
 
         #endregion

@@ -13,9 +13,10 @@
             
             
             <%
-                Session.Abandon();
+                //Session.Abandon();
+                
                 Response.Write("<script>alert('您已登出');location.href='Login.aspx';</script>");
-            
+
             %>
         </div>
     </form>

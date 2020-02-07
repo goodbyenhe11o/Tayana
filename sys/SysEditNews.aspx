@@ -17,7 +17,9 @@
             <asp:FileUpload ID="FileUpload1" runat="server" />
             <br>
             <asp:Label ID="lbPictureForm" runat="server" Text="※圖片格式支援 jpg、png" Font-Bold="True"></asp:Label>
-            <asp:Label ID="lbPictureResult" runat="server"></asp:Label>
+            <asp:Label ID="lbPictureResult" runat="server"></asp:Label><br>
+            <asp:Label ID="lbPic" runat="server" Visible="False" Text="目前新聞縮圖如下"></asp:Label><br>
+            <asp:Image ID="imgPic" runat="server" Width="200px"/>
             <br>
             <br>
 

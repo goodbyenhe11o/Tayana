@@ -199,7 +199,7 @@
                         </HeaderTemplate>
                         <ItemTemplate>
                             <li>
-                                <asp:Image ID="Image1"  ImageUrl='<%#Eval("Picture") %>' runat="server" />
+                                <asp:Image ID="Image1" Width="99%" ImageUrl='<%#Eval("Picture") %>' runat="server" />
                             </li>
                         </ItemTemplate>
                         <FooterTemplate>

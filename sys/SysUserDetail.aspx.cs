@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Configuration;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -16,7 +17,9 @@ namespace TayanaSystem.sys
 
             if (!IsPostBack)
             {
-                string id = Session["id"].ToString();
+                string[] UserData = ((FormsIdentity)(HttpContext.Current.User.Identity)).Ticket.UserData.Split(';');
+
+                string id = UserData[0];
                 string config = WebConfigurationManager.ConnectionStrings["TayanaConnectionString"].ConnectionString;
                 SqlConnection cn = new SqlConnection(config);
                 SqlCommand cm = new SqlCommand($"Select UserName,Account,MenuAuthority from [User] where id = {id}",cn);

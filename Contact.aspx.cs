@@ -84,7 +84,7 @@ namespace TayanaSystem
 
                 //設定smtp sever及port
                 SmtpClient myMail = new SmtpClient("smtp.gmail.com", 587);
-                myMail.Credentials = new System.Net.NetworkCredential("wendy199288@gmail.com", "*****"); //填入帳密
+                myMail.Credentials = new System.Net.NetworkCredential("wendy199288@gmail.com", "使用者密碼"); //填入帳密
                 myMail.EnableSsl = true; //ssl打開，寄信時加密(gmail預設開啟驗證)
 
                 myMail.Send(message); //寄信

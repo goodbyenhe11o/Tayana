@@ -10,22 +10,23 @@
 
                     <h3>新增使用者</h3>
 
-                    User Name
-        <br>
+                    <br>
+                    <asp:Label ID="lbName" runat="server" Text="使用者名稱" AssociatedControlID="tbName"></asp:Label>
                     <asp:TextBox ID="tbName" runat="server" required="" aria-required="true" oninput="setCustomValidity('');"
                         oninvalid="setCustomValidity('請填入使用者暱稱')"></asp:TextBox>
                     <br>
-                    User Account
-        <br>
+                    <br>
+                    <asp:Label ID="lbAccount" runat="server" Text="使用者帳戶" AssociatedControlID="tbAccount"></asp:Label>
                     <asp:TextBox ID="tbAccount" runat="server" required="" aria-required="true" oninput="setCustomValidity('');"
                         oninvalid="setCustomValidity('請填入使用者帳戶')"></asp:TextBox>
                     <br>
-                    User Password
-        <br>
-                    <asp:TextBox ID="tbPassword" runat="server" required="" aria-required="true" oninput="setCustomValidity('');"
+                    <br>
+                    <asp:Label ID="lbPwdOld" runat="server" Text="請輸入使用者密碼"  ></asp:Label>
+                    <asp:TextBox ID="tbPwdOld" runat="server" TextMode="Password" required="" aria-required="true" oninput="setCustomValidity('');"
                         oninvalid="setCustomValidity('請填入使用者密碼')" CssClass="mb-3"></asp:TextBox>
                     <br>
-        <br>
+
+                    <br>
                     後台權限(Menu)
         <br>
                     <table>
@@ -76,13 +77,13 @@
                     <br>
                     帳戶權限
         <asp:RadioButtonList ID="rdblUserManage" runat="server">
-            <asp:ListItem Text="管理者(可管理帳戶與後台)" Value="1"></asp:ListItem>
+            <asp:ListItem Text="帳號管理員(可管理帳戶與後台)" Value="1"></asp:ListItem>
             <asp:ListItem Text="一般使用者(只能管理後台)" Value="2" Selected="True"></asp:ListItem>
         </asp:RadioButtonList>
 
 
-        <br>
-        <br>
+                    <br>
+                    <br>
 
 
                     <asp:Button ID="btnSubmit" runat="server" Text="確認新增帳戶" class="btn btn-primary" OnClick="btnSubmit_OnClick" />
