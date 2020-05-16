@@ -20,8 +20,8 @@
                     <asp:TextBox ID="tbYachtName" runat="server" Width="100%" Height="50px" TextMode="MultiLine"></asp:TextBox>
                     <br>
                     <br>
-                    是否顯示為新遊艇(New Building)
-                    <asp:Label ID="lbNewBuilding" runat="server"></asp:Label>
+                    
+                    <asp:Label ID="lbNewBuilding" runat="server">是否顯示為新遊艇(New Building)</asp:Label>
                     <asp:RadioButtonList ID="rdblNewBuilding" runat="server">
                         <asp:ListItem Text="是" Value="1" Selected="True"></asp:ListItem>
                         <asp:ListItem Text="否" Value="0"></asp:ListItem>

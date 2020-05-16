@@ -17,19 +17,20 @@ namespace TayanaSystem.sys
             if (!IsPostBack)
             {
 
-            if (Request.QueryString["id"] != null)
-            {
-                string config = WebConfigurationManager.ConnectionStrings["TayanaConnectionString"].ConnectionString;
-                SqlConnection cn = new SqlConnection(config);
-                SqlCommand cm = new SqlCommand($"select * from Dealers where Area_Id = @id ", cn);
-                cm.Parameters.Add("@id", SqlDbType.NVarChar);
-                cm.Parameters["@id"].Value = Request.QueryString["id"];
-                cn.Open();
-                SqlDataReader rd = cm.ExecuteReader();
-                rp.DataSource = rd;
-                rp.DataBind();
-                cn.Close();
+                if (Request.QueryString["id"] != null)
+                {
+                    string config = WebConfigurationManager.ConnectionStrings["TayanaConnectionString"].ConnectionString;
+                    SqlConnection cn = new SqlConnection(config);
+                    SqlCommand cm = new SqlCommand($"select * from Dealers where Area_Id = @id ", cn);
+                    cm.Parameters.Add("@id", SqlDbType.NVarChar);
+                    cm.Parameters["@id"].Value = Request.QueryString["id"];
+                    cn.Open();
+                    SqlDataReader rd = cm.ExecuteReader();
+                    rp.DataSource = rd;
+                    rp.DataBind();
+                    cn.Close();
 
+                    Panel1.Visible = true;
                 }
 
             }
@@ -39,12 +40,12 @@ namespace TayanaSystem.sys
 
             if (e.CommandName.Equals("delCmd"))
             {
-         
+
                 foreach (RepeaterItem item in rp.Items)
                 {
                     if (((CheckBox)item.FindControl("cb")).Checked)
                     {
-                        int num = Int32.Parse(((HiddenField) item.FindControl("HiddenField1")).Value); 
+                        int num = Int32.Parse(((HiddenField)item.FindControl("HiddenField1")).Value);
                         string config = WebConfigurationManager.ConnectionStrings["TayanaConnectionString"].ConnectionString;
                         SqlConnection cn = new SqlConnection(config);
                         SqlCommand cm = new SqlCommand($"delete from Dealers where id = {num}", cn);
@@ -53,7 +54,7 @@ namespace TayanaSystem.sys
                         cn.Close();
                     }
                 }
-                        Response.Redirect($"SysDealers.aspx?id={Request.QueryString["id"]}");
+                Response.Redirect($"SysDealers.aspx?id={Request.QueryString["id"]}");
             }
         }
 
@@ -81,10 +82,12 @@ namespace TayanaSystem.sys
 
         //protected void rp_OnItemCommand(object source, RepeaterCommandEventArgs e)
         //{
-            //    Label lb = (Label)rp.FindControl("Label3");
-            //    lb.Text = "the button had been clicked";
-        
+        //    Label lb = (Label)rp.FindControl("Label3");
+        //    lb.Text = "the button had been clicked";
+
         //}
+
+
 
 
 
