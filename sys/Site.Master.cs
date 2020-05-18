@@ -25,13 +25,46 @@ namespace TayanaSystem.sys
             //{
             //    Response.Redirect("Login.aspx");
             //}
+            string[] UserData = ((FormsIdentity)(HttpContext.Current.User.Identity)).Ticket.UserData.Split(';');
+
+            string Manage = UserData[1];
+            if (Request.PhysicalPath.Contains("UserManage") || Request.PhysicalPath.Contains("UserEdit"))
+            {
+                if (!Manage.Contains("1"))
+                {
+                    Response.Redirect("Error.aspx");
+                }
+            }
+
+            string AuthorityNumber = UserData[2];
+            if (Request.PhysicalPath.Contains("Yacht"))
+            {
+                if (!AuthorityNumber.Contains("01"))
+                {
+                    Response.Redirect("Error.aspx");
+                }
+            }
+            if (Request.PhysicalPath.Contains("News"))
+            {
+                if (!AuthorityNumber.Contains("02"))
+                {
+                    Response.Redirect("Error.aspx");
+                }
+            }
+            if (Request.PhysicalPath.Contains("Dealer"))
+            {
+                if (!AuthorityNumber.Contains("03"))
+                {
+                    Response.Redirect("Error.aspx");
+                }
+            }
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
 
 
-            string UserName = ((FormsIdentity) (HttpContext.Current.User.Identity)).Ticket.Name;
+            string UserName = ((FormsIdentity)(HttpContext.Current.User.Identity)).Ticket.Name;
             lbWelcome.Text = "Welcome " + UserName;
             string[] UserData = ((FormsIdentity)(HttpContext.Current.User.Identity)).Ticket.UserData.Split(';');
             //string id = UserData[1];

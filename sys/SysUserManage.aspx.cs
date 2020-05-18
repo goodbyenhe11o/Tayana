@@ -51,5 +51,10 @@ namespace TayanaSystem.sys
 
             Response.Redirect("SysUserManage.aspx");
         }
+
+        protected void btnNewUser_OnClick(object sender, EventArgs e)
+        {
+            Response.Redirect("SysUserEdit.aspx");
+        }
     }
 }

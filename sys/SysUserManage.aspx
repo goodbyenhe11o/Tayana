@@ -8,6 +8,7 @@
     <div class="card">
     <div class="card-body">
     <h3>使用者列表</h3>
+        <asp:Button ID="btnNewUser" runat="server" Text="新增會員" OnClick="btnNewUser_OnClick"/>
         <div class="table-responsive">
     <asp:GridView CssClass="table table-hover" ID="gvUser" runat="server" AutoGenerateColumns="False" DataKeyNames="id" OnRowCommand="gvUser_OnRowCommand">
         <Columns>
